@@ -5,7 +5,7 @@ import QRCode from 'qrcode';
 // on page load
 document.addEventListener('DOMContentLoaded', () => {
     let updatedHTML, html;
-    html = '<tr class="table__body--holder" id="table__body-%num%"><td class="table__body--original"><a href="%longLink%" class="table__body--originalURL" target="_blank" rel="noopener">%longLink%</a></td><td class="table__body--shortened"><div class="table__body--shortenBody"><a href="%shortLink%" id="shortUrl-%num%" class="table__body--shortenURL" target="_blank" rel="noopener">%shortLink%</a></div></td><td class="table__body--functionBtns"><div class="table__body--btnHolder" id="btns-%num%"><button class="table__body--copy" id="copy-%num%" title="Copy"><img class="selectDisable icon__img" src="assets/copy.svg" alt="copy" /></button><button class="table__body--qrcode" id="qrcode-%num%" title="QR Code"><img class="selectDisable icon__img" src="assets/qrcode.svg" alt="QR Code" /></button></div></td></tr>';
+    html = '<tr class="table__body--holder" id="table__body-%num%"><td class="table__body--original"><a href="%longLink%" class="table__body--originalURL" target="_blank" rel="noopener">%longLink%</a></td><td class="table__body--shortened"><div class="table__body--shortenBody"><a href="%shortLink%" id="shortUrl-%num%" class="table__body--shortenURL" target="_blank" rel="noopener">%shortLink%</a></div></td><td class="table__body--functionBtns"><div class="table__body--btnHolder" id="btns-%num%"><button class="table__body--copy" id="copy-%num%" title="Kopiraj"><img class="selectDisable icon__img" src="assets/copy.svg" alt="Kopiraj" /></button><button class="table__body--qrcode" id="qrcode-%num%" title="QR Kod"><img class="selectDisable icon__img" src="assets/qrcode.svg" alt="QR Code" /></button></div></td></tr>';
     // get longURL, shortURL
     browser.storage.local.get(['URL_array', 'count'])
         .then(result => {
@@ -21,11 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.getElementById('delegation__element').insertAdjacentHTML('afterbegin', updatedHTML);
                 }
             } else {
-                console.log('Empty History');
+                console.log('Obriši istoriju');
             }
         })
         .catch(err => {
-            console.log('localstorage_warning : Failed to Fetch.');
+            console.log('localstorage_warning : Neuspešno povezivanje');
         });
 });
 
@@ -82,12 +82,12 @@ document.getElementById('table__clearAll--btn').addEventListener('click', () => 
                         el.parentNode.removeChild(el);
                     })
                     .catch(err => {
-                        console.log('localstorage_warning : Not saved');
+                        console.log('localstorage_warning : Nije sačuvano');
                     });
             }
         })
         .catch(err => {
-            console.log('localstorage_warning: Failed to Fetch.');
+            console.log('localstorage_warning: Neuspešno povezivanje');
         });
 });
 
