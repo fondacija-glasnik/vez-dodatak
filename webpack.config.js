@@ -104,9 +104,9 @@ module.exports = () => ({
             filename: 'opcije.html'
         }),
         new HtmlWebpackPlugin({
-            template: 'src/popup.html',
+            template: 'src/prozor.html',
             inject: false,
-            filename: 'popup.html'
+            filename: 'prozor.html'
         }),
         new HtmlWebpackPlugin({
             template: 'src/istorija.html',

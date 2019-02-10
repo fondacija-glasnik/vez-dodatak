@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "name": "VEZ",
+    "name": "VEZ.RS",
     "version": "1.0.0",
     "browser_specific_settings": {
         "gecko": {
@@ -15,7 +15,7 @@
         "128": "assets/favicon-128.png"
     },
     "browser_action": {
-        "default_popup": "popup.html",
+        "default_popup": "prozor.html",
         "default_icon": {
             "16": "assets/favicon-16.png",
             "32": "assets/favicon-32.png",
@@ -31,7 +31,7 @@
             "js/background.js"
         ]
     },
-    "homepage_url": "https://glasnik.org.rs/projekti/vez",
+    "homepage_url": "https://vez.rs",
     "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
     "options_ui": {
         "page": "opcije.html",
