@@ -1,0 +1,48 @@
+{
+    "manifest_version": 2,
+    "name": "VEZ",
+    "version": "1.0.0",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "fondacija@glasnik.org.rs"
+        }
+    },
+    "description": "Besplatan skraćivač linkova sa statistikom",
+    "icons": {
+        "16": "assets/favicon-16.png",
+        "32": "assets/favicon-32.png",
+        "48": "assets/favicon-48.png",
+        "128": "assets/favicon-128.png"
+    },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "assets/favicon-16.png",
+            "32": "assets/favicon-32.png",
+            "48": "assets/favicon-48.png",
+            "128": "assets/favicon-128.png"
+        },
+        "default_title": "VEZ.RS",
+        "browser_style": false
+    },
+    "author": "Fondacija Glasnik",
+    "background": {
+        "scripts": [
+            "js/background.js"
+        ]
+    },
+    "homepage_url": "https://glasnik.org.rs/projekti/vez",
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "options_ui": {
+        "page": "opcije.html",
+        "open_in_tab": true
+    },
+    "permissions": [
+        "tabs",
+        "storage",
+        "clipboardWrite",
+        "clipboardRead",
+        "https://vez.rs/*/*"
+    ],
+    "short_name": "Vez"
+}
