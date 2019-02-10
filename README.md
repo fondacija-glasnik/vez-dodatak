@@ -10,7 +10,7 @@
 - Generisanje QR kodova
 - Mogućnost zaštite URL-a lozinkom
 - Pregled istorije
-- Besplatno za korišćenje i otvorenog koda
+- Besplatno za korišćenje
 
 ## Podrška za pretraživače
 
